@@ -35,7 +35,7 @@ const handleSearch = () => {
 
 
   return (
-    <header className="bg-[#115FC8] w-full p-6 rounded-b-3xl">
+    <header className="bg-[#115FC8] w-full p-6 rounded-b-3xl relative z-10">
       <div className="font-sora max-w-7xl mx-auto flex flex-col gap-6">
         
         {/* Top Navigation Row */}
