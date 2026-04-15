@@ -2,6 +2,7 @@ import React from "react";
 import type { Metadata } from "next";
 import { Sora, Wix_Madefor_Text, Open_Sans } from "next/font/google";
 import "./globals.css";
+import Header from "./layout/header";
 
 const sora = Sora({
   variable: "--font-sora",
@@ -33,7 +34,13 @@ export default function RootLayout({
       lang="en"
       className={`${sora.variable} ${wixMadeforText.variable} ${openSans.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="flex flex-col min-h-screen">
+        <Header />
+        <main className="grow">
+          {children}
+        </main>
+
+      </body>
     </html>
   );
 }
