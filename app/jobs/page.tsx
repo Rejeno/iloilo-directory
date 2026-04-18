@@ -24,7 +24,7 @@ const JobsPage = () => {
             {/* --- HERO SECTION --- 
           Figma height: 850px * 0.6 = 510px
       */}
-            <section className="relative h-[510px] w-full overflow-hidden flex items-center justify-center">
+            <section className="relative h-[510px] w-full flex items-center justify-center">
                 {/* Background Overlay & Image */}
                 <div
                     className="absolute inset-0 bg-cover bg-center"
@@ -43,8 +43,6 @@ const JobsPage = () => {
                         Make your business known and drive quality leads to your website, your social network pages, and receive inquiries from potential clients with Iloilo Directory!
                     </p>
                 </div>
-
-                {/* Floating Search Bar (Positioned to overlap slightly) */}
 
             </section>
 
