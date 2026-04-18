@@ -2,13 +2,41 @@
 import React from 'react';
 import Image from 'next/image';
 import { Sora, Open_Sans } from 'next/font/google';
-import { Search, SlidersHorizontal, ChevronDown, ArrowRightCircle } from 'lucide-react';
+import { ArrowRightCircle } from 'lucide-react';
 
 const sora = Sora({ subsets: ['latin'], variable: '--font-sora' });
 const openSans = Open_Sans({ subsets: ['latin'], variable: '--font-open-sans' });
 
 // Mock data with Placeholder Image Logic
-const CATEGORIES = Array(33).fill("Beauty & Health");
+const CATEGORIES = [
+    "Agriculture and Aquaculture",
+    "Art and Culture",
+    "Automotive",
+    "Beauty and Wellness",
+    "Business Services",
+    "Churches",
+    "Construction",
+    "Education",
+    "Electronics",
+    "Entertainment",
+    "Events",
+    "Financial Institution",
+    "Food and Beverage",
+    "Hardware",
+    "Home and Parenting",
+    "Logistics",
+    "Manufacturing and Industrial Supplies and Services",
+    "Medical Care",
+    "Pets & Animal Care",
+    "Professional Services",
+    "Property and Real Estate",
+    "Shopping and Retail",
+    "Sports and Recreation",
+    "Tourism and Accommodation",
+    "Transportation",
+    "Utilities, Public Services and Government",
+    "Warehousing"
+];
 const FEATURE_CARDS = [
     { title: "Accommodations", count: 117, seed: "hotel" },
     { title: "Restaurants", count: 85, seed: "food" },
@@ -41,41 +69,6 @@ export default function ExploreCategories() {
                     <p className="font-sora font-medium text-lg md:text-2xl max-w-4xl mx-auto opacity-90 mb-10">
                         Make your business known and drive quality leads to your website, your social network pages, and receive inquiries from potential clients with Iloilo Directory!
                     </p>
-
-                    {/* Search Bar - Responsive and Scaled */}
-                    <div className="flex flex-col md:flex-row justify-center gap-3 w-full max-w-4xl mx-auto">
-                        <div className="relative flex-grow">
-                            <input
-                                type="text"
-                                placeholder="What are you looking for...."
-                                className="w-full h-[48px] px-6 rounded-xl bg-[#FAFAEF] text-sm text-[#827D7D] outline-none shadow-sm"
-                            />
-                        </div>
-
-                        <div className="flex gap-3">
-                            <div className="relative w-32 md:w-40">
-                                <select className="w-full h-[48px] px-4 rounded-xl bg-[#FAFAEF] text-sm text-[#827D7D] appearance-none outline-none shadow-sm">
-                                    <option>Category</option>
-                                </select>
-                                <ChevronDown className="absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 text-black" />
-                            </div>
-
-                            <div className="relative w-32 md:w-40">
-                                <select className="w-full h-[48px] px-4 rounded-xl bg-[#FAFAEF] text-sm text-[#827D7D] appearance-none outline-none shadow-sm">
-                                    <option>Location</option>
-                                </select>
-                                <ChevronDown className="absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 text-black" />
-                            </div>
-
-                            <button className="w-12 h-[48px] bg-[#FACC15] rounded-xl flex items-center justify-center hover:bg-yellow-500 transition-colors shadow-sm">
-                                <Search className="w-5 h-5 text-[#343434]" />
-                            </button>
-
-                            <button className="w-12 h-[48px] bg-[#FACC15] rounded-xl flex items-center justify-center hover:bg-yellow-500 transition-colors shadow-sm">
-                                <SlidersHorizontal className="w-5 h-5 text-[#343434]" />
-                            </button>
-                        </div>
-                    </div>
                 </div>
             </section>
 
@@ -119,10 +112,10 @@ export default function ExploreCategories() {
                     {CATEGORIES.map((cat, i) => (
                         <button
                             key={i}
-                            className="flex items-center justify-between px-6 w-full h-[64px] bg-[#113FC8] rounded-xl text-[#FCFCF5] hover:bg-[#0e32a6] transition-all hover:shadow-lg group"
+                            className="flex items-center justify-between px-6 w-full h-[80px] bg-[#113FC8] rounded-xl text-[#FCFCF5] hover:bg-[#0e32a6] transition-all hover:shadow-lg group text-left"
                         >
-                            <span className="font-sora font-bold text-lg">{cat}</span>
-                            <ArrowRightCircle className="w-6 h-6 text-white group-hover:translate-x-1 transition-transform" />
+                            <span className="font-sora font-bold text-lg pr-4">{cat}</span>
+                            <ArrowRightCircle className="w-6 h-6 shrink-0 text-white group-hover:translate-x-1 transition-transform" />
                         </button>
                     ))}
                 </div>
