@@ -76,7 +76,9 @@ export default function Header() {
             >
               Log-in
             </button>
-            <button className="bg-[#e2e8f0] text-[#1866cc] px-3 py-0.5 rounded-lg font-normal hover:bg-gray-100 transition-colors cursor-pointer">
+            <button
+              onClick={() => router.push('/sign-up')}
+              className="bg-[#e2e8f0] text-[#1866cc] px-3 py-0.5 rounded-lg font-normal hover:bg-gray-100 transition-colors cursor-pointer">
               Sign-up
             </button>
           </div>
