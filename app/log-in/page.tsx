@@ -75,6 +75,33 @@ const LoginPage = () => {
                     </a>
                 </div>
 
+                {/* reCAPTCHA - Full Width (Matches inputs) */}
+                <div className="w-[418.8px] mb-[30px]">
+                    <div className="flex items-center justify-between bg-[#f9f9f9] p-[10px] px-[20px] border border-[#d3d3d3] rounded-[3px] w-full h-[76px] shadow-sm select-none">
+                        <div className="flex items-center gap-4">
+                            <input
+                                type="checkbox"
+                                className="w-[28px] h-[28px] cursor-pointer border-[#c1c1c1] rounded-sm focus:ring-0"
+                            />
+                            <span className="font-['Wix_Madefor_Text',sans-serif] text-[16px] text-black font-normal">
+                                I'm not a robot
+                            </span>
+                        </div>
+                        <div className="flex flex-col items-center justify-center pr-1">
+                            <img
+                                src="https://www.gstatic.com/recaptcha/api2/logo_48.png"
+                                alt="recaptcha logo"
+                                className="w-[32px] h-[32px] mb-0.5"
+                            />
+                            <span className="text-[10px] text-[#555] font-semibold tracking-tight uppercase">reCAPTCHA</span>
+                            <div className="flex gap-1 text-[8px] text-[#555] mt-0.5">
+                                <span className="hover:underline cursor-pointer">Privacy</span>
+                                <span className="no-underline">-</span>
+                                <span className="hover:underline cursor-pointer">Terms</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
                 {/* Action Buttons with Hover Effects */}
                 <div className="flex flex-col items-center space-y-[21px]">
