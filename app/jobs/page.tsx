@@ -27,10 +27,10 @@ const JobsPage = () => {
             <section className="relative h-[510px] w-full overflow-hidden flex items-center justify-center">
                 {/* Background Overlay & Image */}
                 <div
-                    className="absolute inset-0 z-0 bg-cover bg-center"
+                    className="absolute inset-0 bg-cover bg-center"
                     style={{
-                        backgroundImage: `linear-gradient(0deg, rgba(20, 17, 17, 0.52), rgba(20, 17, 17, 0.52)), url('/House-and-Lot-for-sale-in-Iloilo-Photo-Credit-Scholarris20-scaled-1.jpg')`, // Ensure this image is in your public folder
-                        border: '1px solid #000000'
+                        backgroundImage: `linear-gradient(0deg, rgba(20, 17, 17, 0.52), rgba(20, 17, 17, 0.52)), url('https://www.allproperties.com.ph/wp-content/uploads/2022/01/House-and-Lot-for-sale-in-Iloilo-Photo-Credit-Scholarris20-scaled-1-2048x1536.jpg')`,
+                        zIndex: 0
                     }}
                 />
 
