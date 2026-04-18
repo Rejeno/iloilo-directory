@@ -84,7 +84,7 @@ function ItemCard({ index }: { index: number }) {
   const seed = (index + 1) * 100;
   
   return (
-    <div className="w-full max-w-[280px] bg-[#FCFCF5] shadow-[0px_4px_10px_rgba(0,0,0,0.1)] rounded-[12px_24px_24px_24px] p-2 relative group cursor-pointer transition-transform hover:-translate-y-1">
+    <div className="w-full max-w-[280px] bg-[#FCFCF5] shadow-[0px_4px_10px_rgba(0,0,0,0.1)] rounded-[12px_24px_24px_24px] p-2 relative group cursor-pointer border border-transparent hover:border-[#113FC8]/30 transition-all duration-300 hover:-translate-y-1">
       {/* Discount Badge */}
       <div className="absolute top-[10px] right-2 z-10 w-[70px] h-[24px] bg-[#BAD1EF] rounded-[0px_12px] flex items-center justify-center">
           <span className="text-[#115FC8] font-wix font-bold text-[10px] md:text-xs">
