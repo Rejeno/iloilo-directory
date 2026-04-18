@@ -139,7 +139,7 @@ function Pagination() {
             
             {/* Page Numbers */}
             {[1, 2, 3, 4, 5, 6].map(num => (
-                <button key={num} className={`w-8 h-10 md:w-10 md:h-12 flex items-center justify-center rounded-lg shadow-sm font-bold transition-all ${num === 1 ? 'bg-[#FCFCF5] text-[#113FC8] border-2 border-[#113FC8]' : 'bg-[#FCFCF5] text-[#113FC8] hover:bg-gray-100'}`}>
+                <button key={num} className={`w-8 h-10 md:w-10 md:h-12 flex items-center justify-center rounded-lg shadow-sm font-bold font-sora transition-all ${num === 1 ? 'bg-[#dee6f0] text-[#113FC8] border-2 border-[#113FC8]' : 'bg-[#dee6f0] text-[#113FC8] hover:bg-[#c8d6e8]'}`}>
                     {num}
                 </button>
             ))}
@@ -153,7 +153,7 @@ function Pagination() {
             
             {/* End Pages */}
             {[138, 139, 140].map(num => (
-                <button key={num} className="w-12 h-10 md:w-14 md:h-12 flex items-center justify-center bg-[#FCFCF5] text-[#113FC8] rounded-lg shadow-sm hover:bg-gray-100 font-bold">
+                <button key={num} className="w-12 h-10 md:w-14 md:h-12 flex items-center justify-center bg-[#dee6f0] text-[#113FC8] rounded-lg shadow-sm hover:bg-[#c8d6e8] font-bold font-sora">
                     {num}
                 </button>
             ))}
