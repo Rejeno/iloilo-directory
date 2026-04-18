@@ -21,11 +21,8 @@ const JobsPage = () => {
 
     return (
         <div className="min-h-screen bg-[#FBFBF5] font-sans">
-            {/* --- HERO SECTION --- 
-          Figma height: 850px * 0.6 = 510px
-      */}
+            {/* --- HERO SECTION --- */}
             <section className="relative h-[510px] w-full flex items-center justify-center">
-                {/* Background Overlay & Image */}
                 <div
                     className="absolute inset-0 bg-cover bg-center"
                     style={{
@@ -34,7 +31,6 @@ const JobsPage = () => {
                     }}
                 />
 
-                {/* Hero Content */}
                 <div className="relative z-10 text-center text-[#FCFCF5] max-w-[910px] px-4">
                     <h1 className="text-[45px] leading-[1.2] font-bold mb-6 tracking-tight">
                         Job Listings
@@ -43,7 +39,6 @@ const JobsPage = () => {
                         Make your business known and drive quality leads to your website, your social network pages, and receive inquiries from potential clients with Iloilo Directory!
                     </p>
                 </div>
-
             </section>
 
             {/* --- MAIN CONTENT AREA --- */}
@@ -82,7 +77,7 @@ const JobsPage = () => {
                     {jobListings.map((job, index) => (
                         <div
                             key={index}
-                            className="bg-[#FCFCF5] rounded-[16px] p-4 shadow-[0px_4px_4px_rgba(0,0,0,0.25)] border border-transparent hover:border-[#113FC8]/30 transition-all group"
+                            className="bg-[#FCFCF5] rounded-[12px_24px_24px_24px] p-4 shadow-[0px_4px_10px_rgba(0,0,0,0.1)] border border-transparent hover:border-[#113FC8]/30 transition-transform duration-300 hover:-translate-y-1 group cursor-pointer"
                         >
                             {/* Badge */}
                             <div className="flex justify-end mb-2">
@@ -93,11 +88,12 @@ const JobsPage = () => {
 
                             {/* Card Header: Logo & Title */}
                             <div className="flex gap-4 mb-4">
-                                <div className="w-[90px] h-[82px] bg-[#FAFAEF] rounded-xl flex items-center justify-center border border-gray-100 shrink-0">
-                                    {/* Substitute for logo */}
-                                    <div className="w-12 h-12 rounded-full bg-blue-50 border border-blue-100 flex items-center justify-center text-[10px] font-bold text-blue-600">
-                                        LOGO
-                                    </div>
+                                <div className="w-[90px] h-[82px] bg-[#FAFAEF] rounded-xl flex items-center justify-center border border-gray-100 shrink-0 overflow-hidden">
+                                    <img
+                                        src="https://upload.wikimedia.org/wikipedia/commons/d/dc/WVSU_Main_Campus_Logo.svg"
+                                        alt="WVSU Logo"
+                                        className="w-14 h-14 object-contain transition-transform duration-700 group-hover:scale-110"
+                                    />
                                 </div>
                                 <div>
                                     <h3 className="text-[16px] font-bold text-[#4D4D4D] leading-tight mb-1 group-hover:text-[#115FC8] transition-colors">
@@ -112,8 +108,8 @@ const JobsPage = () => {
 
                             {/* Card Footer: Price & Action */}
                             <div className="flex justify-between items-center">
-                                <div>
-                                    <span className="text-[16px] font-bold text-[#115FC8] block">{job.salary}</span>
+                                <div className="flex items-baseline gap-1">
+                                    <span className="text-[16px] font-bold text-[#115FC8]">{job.salary}</span>
                                     <span className="text-[10px] font-bold text-[#4D4D4D]">/monthly</span>
                                 </div>
                                 <button className="flex items-center gap-1.5 border-2 border-[#113FC8] text-[#113FC8] text-[11px] font-bold px-4 py-2 rounded-xl hover:bg-[#113FC8] hover:text-white transition-all">
