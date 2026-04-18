@@ -1,16 +1,9 @@
-import React from 'react';
-import {
-    Search,
-    SlidersHorizontal,
-    LayoutGrid,
-    StretchHorizontal,
-    ChevronLeft,
-    ChevronRight,
-    ArrowRight
-} from 'lucide-react';
+"use client";
 
-const JobsPage = () => {
-    // Mock data for the cards
+import React from 'react';
+import Image from 'next/image';
+
+export default function JobsPage() {
     const jobListings = Array(15).fill({
         title: "Computer Science Instructor",
         company: "WVSU - Main Campus",
@@ -22,7 +15,7 @@ const JobsPage = () => {
     return (
         <div className="min-h-screen bg-[#FBFBF5] font-sans">
             {/* --- HERO SECTION --- */}
-            <section className="relative h-[510px] w-full flex items-center justify-center">
+            <section className="relative h-[510px] w-full flex items-center justify-center overflow-hidden">
                 <div
                     className="absolute inset-0 bg-cover bg-center"
                     style={{
@@ -30,12 +23,11 @@ const JobsPage = () => {
                         zIndex: 0
                     }}
                 />
-
                 <div className="relative z-10 text-center text-[#FCFCF5] max-w-[910px] px-4">
-                    <h1 className="text-[45px] leading-[1.2] font-bold mb-6 tracking-tight">
+                    <h1 className="text-[45px] leading-[1.2] font-bold mb-6 tracking-tight font-sora">
                         Job Listings
                     </h1>
-                    <p className="text-[24px] leading-[38px] font-medium opacity-90">
+                    <p className="text-[24px] leading-[38px] font-medium opacity-90 font-sora">
                         Make your business known and drive quality leads to your website, your social network pages, and receive inquiries from potential clients with Iloilo Directory!
                     </p>
                 </div>
@@ -43,30 +35,34 @@ const JobsPage = () => {
 
             {/* --- MAIN CONTENT AREA --- */}
             <main className="max-w-[1152px] mx-auto px-6 pt-24 pb-20">
-
                 {/* Results Info & Filter Controls */}
                 <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
                     <div>
                         <p className="text-[#343434] text-sm mb-2 opacity-70">Showing 1 - 40 of 10,085 Results</p>
-                        <h2 className="text-[30px] font-bold text-[#343434]">Find the Perfect Job</h2>
+                        <h2 className="text-[30px] font-bold text-[#343434] font-sora">Find the Perfect Job</h2>
                     </div>
 
                     <div className="flex items-center gap-3">
-                        <div className="relative min-w-[160px]">
-                            <select className="w-full appearance-none bg-[#FAFAEF] border-none shadow-sm rounded-xl px-4 py-2.5 text-sm text-[#827D7D] focus:ring-0">
-                                <option>Sort by:</option>
+                        <div className="relative w-[190px] h-[44px] bg-[#FAFAEF] shadow-sm rounded-xl flex items-center px-4">
+                            <select
+                                suppressHydrationWarning
+                                className="w-full appearance-none bg-transparent border-none text-sm text-[#827D7D] focus:outline-none cursor-pointer pr-8"
+                            >
+                                <option>Sort by: Newest</option>
                             </select>
-                            <div className="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-[#827D7D]">
-                                <ChevronRight size={16} className="rotate-90" />
+                            <div className="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none">
+                                <DropdownIcon />
                             </div>
                         </div>
 
-                        <button className="p-2.5 bg-[#113FC8] rounded-xl text-white shadow-md">
-                            <LayoutGrid size={22} />
-                        </button>
-                        <button className="p-2.5 bg-[#FAFAEF] rounded-xl text-[#324558] shadow-sm border border-gray-100">
-                            <StretchHorizontal size={22} />
-                        </button>
+                        <div className="flex gap-2">
+                            <button suppressHydrationWarning className="w-10 h-10 bg-[#113FC8] shadow-sm rounded-xl flex items-center justify-center text-[#FCFCF5]">
+                                <GridViewIcon />
+                            </button>
+                            <button suppressHydrationWarning className="w-10 h-10 bg-[#FAFAEF] shadow-sm rounded-xl flex items-center justify-center text-[#324558]">
+                                <ListViewIcon />
+                            </button>
+                        </div>
                     </div>
                 </div>
 
@@ -79,24 +75,24 @@ const JobsPage = () => {
                             key={index}
                             className="bg-[#FCFCF5] rounded-[12px_24px_24px_24px] p-4 shadow-[0px_4px_10px_rgba(0,0,0,0.1)] border border-transparent hover:border-[#113FC8]/30 transition-transform duration-300 hover:-translate-y-1 group cursor-pointer"
                         >
-                            {/* Badge */}
                             <div className="flex justify-end mb-2">
                                 <span className="bg-[#115FC8] text-[#FCFCF5] text-[10px] font-bold px-3 py-1 rounded-md">
                                     {job.type}
                                 </span>
                             </div>
 
-                            {/* Card Header: Logo & Title */}
                             <div className="flex gap-4 mb-4">
-                                <div className="w-[90px] h-[82px] bg-[#FAFAEF] rounded-xl flex items-center justify-center border border-gray-100 shrink-0 overflow-hidden">
-                                    <img
+                                <div className="w-[90px] h-[82px] bg-[#FAFAEF] rounded-xl flex items-center justify-center border border-gray-100 shrink-0 overflow-hidden relative">
+                                    <Image
                                         src="https://upload.wikimedia.org/wikipedia/commons/d/dc/WVSU_Main_Campus_Logo.svg"
                                         alt="WVSU Logo"
-                                        className="w-14 h-14 object-contain transition-transform duration-700 group-hover:scale-110"
+                                        fill
+                                        sizes="90px"
+                                        className="object-contain p-2 transition-transform duration-700 group-hover:scale-110"
                                     />
                                 </div>
                                 <div>
-                                    <h3 className="text-[16px] font-bold text-[#4D4D4D] leading-tight mb-1 group-hover:text-[#115FC8] transition-colors">
+                                    <h3 className="text-[16px] font-bold text-[#4D4D4D] leading-tight mb-1 group-hover:text-[#115FC8] transition-colors font-sora">
                                         {job.title}
                                     </h3>
                                     <p className="text-[12px] text-gray-600 font-medium">{job.company}</p>
@@ -106,73 +102,133 @@ const JobsPage = () => {
 
                             <hr className="border-[#DCDCD6] mb-4" />
 
-                            {/* Card Footer: Price & Action */}
                             <div className="flex justify-between items-center">
                                 <div className="flex items-baseline gap-1">
                                     <span className="text-[16px] font-bold text-[#115FC8]">{job.salary}</span>
                                     <span className="text-[10px] font-bold text-[#4D4D4D]">/monthly</span>
                                 </div>
-                                <button className="flex items-center gap-1.5 border-2 border-[#113FC8] text-[#113FC8] text-[11px] font-bold px-4 py-2 rounded-xl hover:bg-[#113FC8] hover:text-white transition-all">
+                                <button suppressHydrationWarning className="flex items-center gap-1.5 border-2 border-[#113FC8] text-[#113FC8] text-[11px] font-bold px-4 py-2 rounded-xl hover:bg-[#113FC8] hover:text-white transition-all">
                                     View Details
-                                    <ArrowRight size={12} />
                                 </button>
                             </div>
                         </div>
                     ))}
                 </div>
 
-                {/* --- PAGINATION SECTION --- */}
-                <div className="mt-20 flex flex-wrap items-center justify-between gap-6">
-                    {/* Page Numbers */}
-                    <div className="flex items-center gap-2">
-                        <button className="p-3 bg-[#113FC8] text-white rounded-lg hover:bg-blue-700">
-                            <ChevronLeft size={20} />
-                        </button>
-
-                        <div className="flex items-center gap-1.5">
-                            {[1, 2, 3, 4, 5, 6].map((n) => (
-                                <button
-                                    key={n}
-                                    className={`w-10 h-10 rounded-lg font-bold text-sm border transition-all ${n === 1
-                                        ? 'bg-blue-100 text-[#113FC8] border-[#113FC8]'
-                                        : 'bg-[#FCFCF5] text-[#113FC8] border-transparent shadow-sm hover:border-blue-300'
-                                        }`}
-                                >
-                                    {n}
-                                </button>
-                            ))}
-                            <div className="flex gap-1 px-2">
-                                <span className="w-1.5 h-1.5 rounded-full bg-[#113FC8]" />
-                                <span className="w-1.5 h-1.5 rounded-full bg-[#113FC8]" />
-                                <span className="w-1.5 h-1.5 rounded-full bg-[#113FC8]" />
-                            </div>
-                            {[138, 139, 140].map((n) => (
-                                <button key={n} className="w-10 h-10 rounded-lg font-bold text-sm bg-[#FCFCF5] text-[#113FC8] border border-transparent shadow-sm">
-                                    {n}
-                                </button>
-                            ))}
-                        </div>
-
-                        <button className="p-3 bg-[#113FC8] text-white rounded-lg hover:bg-blue-700">
-                            <ChevronRight size={20} />
-                        </button>
-                    </div>
-
-                    {/* Go to Page Input */}
-                    <div className="flex items-center gap-4">
-                        <span className="font-bold text-[#000000] text-sm">Go to page:</span>
-                        <div className="relative">
-                            <input
-                                type="text"
-                                placeholder="e.g 25"
-                                className="w-24 px-4 py-3 bg-[#FCFCF5] border border-[#343434] rounded-lg shadow-inner text-sm text-center focus:outline-none focus:ring-1 focus:ring-blue-500"
-                            />
-                        </div>
-                    </div>
+                {/* --- PAGINATION --- */}
+                <div className="mt-20 flex justify-center">
+                    <Pagination />
                 </div>
             </main>
         </div>
     );
-};
+}
 
-export default JobsPage;
+function Pagination() {
+    return (
+        <div className="flex items-center gap-2">
+            {/* Caret Left */}
+            <button
+                suppressHydrationWarning
+                className="w-10 h-10 md:w-12 md:h-12 flex items-center justify-center bg-[#113FC8] text-white rounded-lg shadow hover:bg-[#0e32a6] transition-colors"
+            >
+                <CaretLeftIcon />
+            </button>
+
+            {/* Page Numbers */}
+            {[1, 2, 3, 4, 5, 6].map(num => (
+                <button
+                    key={num}
+                    suppressHydrationWarning
+                    className={`w-8 h-10 md:w-10 md:h-12 flex items-center justify-center rounded-lg shadow-sm font-bold transition-all ${num === 1 ? 'bg-[#FCFCF5] text-[#113FC8] border-2 border-[#113FC8]' : 'bg-[#FCFCF5] text-[#113FC8] hover:bg-gray-100'}`}
+                >
+                    {num}
+                </button>
+            ))}
+
+            {/* Ellipses */}
+            <div className="flex gap-1.5 px-2">
+                {[1, 2, 3].map(i => (
+                    <div key={i} className="w-1.5 h-1.5 bg-[#113FC8] rounded-full" />
+                ))}
+            </div>
+
+            {/* End Pages */}
+            {[138, 139, 140].map(num => (
+                <button
+                    key={num}
+                    suppressHydrationWarning
+                    className="w-12 h-10 md:w-14 md:h-12 flex items-center justify-center bg-[#FCFCF5] text-[#113FC8] rounded-lg shadow-sm hover:bg-gray-100 font-bold"
+                >
+                    {num}
+                </button>
+            ))}
+
+            {/* Caret Right */}
+            <button
+                suppressHydrationWarning
+                className="w-10 h-10 md:w-12 md:h-12 flex items-center justify-center bg-[#113FC8] text-white rounded-lg shadow hover:bg-[#0e32a6] transition-colors"
+            >
+                <CaretRightIcon />
+            </button>
+
+            {/* Go to page select */}
+            <div className="ml-8 hidden lg:flex items-center gap-4">
+                <span className="font-sora font-semibold text-lg">Go to page:</span>
+                <div className="relative w-20 h-10 md:w-24 md:h-12">
+                    <input
+                        suppressHydrationWarning
+                        type="text"
+                        placeholder="e.g 25"
+                        className="w-full h-full bg-[#FCFCF5] border border-[#343434] shadow-sm rounded-lg text-center font-open-sans text-lg text-[#827D7D] focus:outline-none"
+                    />
+                </div>
+            </div>
+        </div>
+    );
+}
+
+function CaretLeftIcon() {
+    return (
+        <svg width="12" height="20" viewBox="0 0 12 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10 18L2 10L10 2" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
+        </svg>
+    );
+}
+
+function CaretRightIcon() {
+    return (
+        <svg width="12" height="20" viewBox="0 0 12 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M2 18L10 10L2 2" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
+        </svg>
+    );
+}
+// Custom Icons
+function DropdownIcon() {
+    return (
+        <svg width="39" height="39" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10 15L19.5 24.5L29 15" stroke="#827D7D" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+        </svg>
+    );
+}
+
+function GridViewIcon() {
+    return (
+        <svg width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="6" y="6" width="16" height="16" fill="currentColor" />
+            <rect x="25.5" y="6" width="16.5" height="16" fill="currentColor" />
+            <rect x="6" y="25.5" width="16" height="16.5" fill="currentColor" />
+            <rect x="25.5" y="25.5" width="16.5" height="16.5" fill="currentColor" />
+        </svg>
+    );
+}
+
+function ListViewIcon() {
+    return (
+        <svg width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="6" y="6" width="8.2" height="36" fill="currentColor" />
+            <rect x="19.9" y="6" width="8.2" height="36" fill="currentColor" />
+            <rect x="33.8" y="6" width="8.2" height="36" fill="currentColor" />
+        </svg>
+    );
+}
