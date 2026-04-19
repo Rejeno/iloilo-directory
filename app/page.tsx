@@ -57,7 +57,7 @@ const HomePage = () => {
 
         {/* Support Local, Buy Local */}
         <section>
-          <div className="flex justify-between items-center mb-6 mt-25">
+          <div className="flex justify-between items-center mb-12 mt-25">
             <h2 className="text-5xl font-bold text-[#343434]">Support Local, Buy Local</h2>
             <button className="bg-[#115FC8] text-white px-5 py-2 rounded-xl font-medium flex items-center gap-2 cursor-pointer">
               View All <span>▶</span>
@@ -171,6 +171,61 @@ const HomePage = () => {
           </div>
         </section>
 
+          {/* Recent Listings */}
+        <section>
+          <div className="flex justify-between items-center mb-12 mt-25">
+            <h2 className="text-5xl font-bold text-[#343434]">Recent Listings</h2>
+            <button className="bg-[#115FC8] text-white px-5 py-2 rounded-xl font-medium flex items-center gap-2 cursor-pointer">
+              View All <span>▶</span>
+            </button>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {[1, 2, 3, 4, 5, 6].map((item) => (
+              <div key={item} className="bg-[#FCFCF5] rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition">
+                <div className="relative h-48">
+                  <img src="/home-assets/ilodirect.jpg" alt="Coffee Break" className="w-full h-full object-cover" />
+                  <div className={`absolute top-3 left-3 text-white text-[10px] font-bold px-2.5 py-1 rounded-lg ${item % 2 === 0 ? 'bg-green-500' : 'bg-red-500'}`}>
+                    {item % 2 === 0 ? 'Open' : 'Closed'}
+                  </div>
+                  <div className="absolute top-3 right-3 bg-white backdrop-blur-sm text-black text-[10px] font-medium px-2.5 py-1 rounded-lg shadow-sm">
+                    Education & Training
+                  </div>
+                </div>
+                <div className="p-4 flex items-center justify-between">
+                  <div>
+                    <h3 className="font-normal text-2xl text-black">Coffee Break Manduriao</h3>
+                    <div className="flex items-center text-sm text-black mt-2 gap-4">
+                      <span className="flex items-center gap-1">
+                        <img 
+                          src="/home-assets/location-icon.svg" 
+                          alt="Location" 
+                          className="w-5 h-5" 
+                        />
+                        Miag-ao, Iloilo
+                      </span>
+                      <span className="flex items-center gap-1">
+                        <img 
+                          src="/home-assets/calendar-icon.svg" 
+                          alt="Calendar" 
+                          className="w-6 h-6" 
+                        />
+                        Monday - Friday
+                      </span>
+                    </div>
+                  </div>
+                <button>
+                  <img 
+                    src="/home-assets/blue-arrow-button.svg" 
+                    alt="View Details" 
+                    className="w-13 h-13 cursor-pointer transition-transform duration-200 hover:scale-110" 
+                  />
+                </button>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+        
       </div>
     </main>
   );
