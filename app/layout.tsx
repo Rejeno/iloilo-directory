@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { Sora, Wix_Madefor_Text, Open_Sans } from "next/font/google";
 import "./globals.css";
 import Header from "./layout/header";
+import Footer from "./layout/footer";
 
 const sora = Sora({
   variable: "--font-sora",
@@ -39,7 +40,7 @@ export default function RootLayout({
         <main className="grow">
           {children}
         </main>
-
+        <Footer />
       </body>
     </html>
   );
