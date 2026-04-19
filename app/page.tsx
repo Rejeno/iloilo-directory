@@ -179,9 +179,9 @@ const HomePage = () => {
               View All <span>▶</span>
             </button>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-3 gap-6">
             {[1, 2, 3, 4, 5, 6].map((item) => (
-              <div key={item} className="bg-[#FCFCF5] rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition">
+              <div key={item} className="bg-[#FCFCF5] rounded-2xl overflow-hidden shadow-md hover:shadow-lg  transition">
                 <div className="relative h-48">
                   <img src="/home-assets/ilodirect.jpg" alt="Coffee Break" className="w-full h-full object-cover" />
                   <div className={`absolute top-3 left-3 text-white text-[10px] font-bold px-2.5 py-1 rounded-lg ${item % 2 === 0 ? 'bg-green-500' : 'bg-red-500'}`}>
@@ -225,7 +225,42 @@ const HomePage = () => {
             ))}
           </div>
         </section>
-        
+
+          {/* Job Offerings */}
+        <section>
+          <div className="flex justify-between items-center mb-12 mt-25">
+            <h2 className="text-5xl font-bold text-[#343434]">Job Offerings</h2>
+            <button className="bg-[#115FC8] text-white px-5 py-2 rounded-xl font-medium flex items-center gap-2 cursor-pointer">
+              View All <span>▶</span>
+            </button>
+          </div>
+          <div className="grid grid-cols-3 gap-6">
+            {[1, 2, 3, 4, 5, 6].map((item) => (
+              <div key={item} className="bg-[#FCFCF5] rounded-xl p-5 shadow-md hover:shadow-lg transition flex flex-col justify-between">
+                <div className="flex gap-4 mb-4">
+                  <div className="w-22 h-22 rounded-full bg-gray-50 shrink-0 flex items-center justify-center border border-blue-200 overflow-hidden">
+                    <img src="/home-assets/wvsu-logo.svg" alt="Logo" className="w-full h-full object-cover" />
+                  </div>
+                  <div className="flex-1">
+                    <div className="flex justify-between items-start">
+                      <h3 className="font-semibold text-[#4D4D4D] leading-tight">Computer Science<br/>Instructor</h3>
+                      <span className="bg-[#115FC8] text-white text-[10px] font-medium px-2 rounded-sm">Full-time</span>
+                    </div>
+                    <p className="text-xs text-black mt-1 font-normal">WVSU - Main Campus</p>
+                    <p className="text-xs text-black mt-0.5 truncate">Luna St, La Paz, Iloilo City, 5000 Iloilo</p>
+                  </div>
+                </div>
+                <div className="border-t-2 border-[#DCDCD6] pt-4 flex justify-between items-center">
+                  <p className="text-[#115FC8] font-semibold">₱ 30,000.00 <span className="text-[#4D4D4D] text-xs font-semibold">/monthly</span></p>
+                  <button className="text-[#113FC8] border-2 border-[#113FC8] px-3 py-1.5 rounded-xl text-xs font-semibold hover:bg-blue-50 transition">
+                    View Details ❯
+                  </button>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
       </div>
     </main>
   );
