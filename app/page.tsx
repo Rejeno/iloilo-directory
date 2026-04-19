@@ -261,6 +261,24 @@ const HomePage = () => {
           </div>
         </section>
 
+          {/* Newsletter Section */}
+        <section className="bg-[#FACC15] rounded-3xl p-12 text-center mt-25 shadow-sm">
+          <h2 className="text-4xl font-bold text-[#343434] mb-10">Get notified of latest listings</h2>
+          <div className="max-w-220 mx-auto bg-white rounded-2xl py-2 px-6 flex border border-gray-200 shadow-sm mb-4">
+            <input 
+              type="email" 
+              placeholder="Enter Email Address" 
+              className="flex-1 bg-transparent py-2 outline-none text-[#827D7D]"
+            />
+            <button className="bg-[#115FC8] text-white px-8 py-2 rounded-xl font-medium hover:bg-blue-700 transition cursor-pointer">
+              Subscribe
+            </button>
+          </div>
+          <p className="text-sm text-[#343434] font-light">
+            We value your privacy. Your email address is only used to send our newsletter and will not be shared. You can unsubscribe at any time.
+          </p>
+        </section>
+
       </div>
     </main>
   );
