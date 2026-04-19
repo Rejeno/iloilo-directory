@@ -1,4 +1,3 @@
-
 const HomePage = () => {
   return (
     <main className="min-h-screen bg-gray-50 font-sans">
@@ -34,17 +33,17 @@ const HomePage = () => {
         <section>
           <div className="flex justify-between items-center mt-12 mb-12">
             <h2 className="text-5xl font-bold text-[#343434]">Popular Categories</h2>
-            <button className="bg-[#115FC8] text-white px-5 py-2 rounded-xl font-medium flex items-center gap-2 cursor-pointer">
+            <button className="bg-[#115FC8] text-white px-5 py-2 rounded-xl font-medium flex items-center gap-2 cursor-pointer transition-all duration-300 ease-in-out hover:bg-blue-800 hover:scale-105 hover:shadow-md">
               View All <span>▶</span>
             </button>
           </div>
           <div className="grid grid-cols-4 gap-6">
             {[1, 2, 3, 4, 5, 6, 7, 8].map((item) => (
-              <div key={item} className="relative rounded-xl overflow-hidden group cursor-pointer h-62 shadow-sm">
+              <div key={item} className="relative rounded-xl overflow-hidden group cursor-pointer h-62 shadow-sm transition-all duration-300 ease-in-out hover:-translate-y-1 hover:shadow-xl">
                 <img 
                   src="/home-assets/ilobed.jpg" 
                   alt="Category" 
-                  className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-300" 
+                  className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500" 
                 />
                 <div className="absolute bottom-0 left-0 right-0 bg-[#115FC8]/80 text-white py-3 px-3 text-center z-10">
                   <p className="font-bold text-xl leading-tight">Government & Orgs</p>
@@ -59,13 +58,13 @@ const HomePage = () => {
         <section>
           <div className="flex justify-between items-center mb-12 mt-25">
             <h2 className="text-5xl font-bold text-[#343434]">Support Local, Buy Local</h2>
-            <button className="bg-[#115FC8] text-white px-5 py-2 rounded-xl font-medium flex items-center gap-2 cursor-pointer">
+            <button className="bg-[#115FC8] text-white px-5 py-2 rounded-xl font-medium flex items-center gap-2 cursor-pointer transition-all duration-300 ease-in-out hover:bg-blue-800 hover:scale-105 hover:shadow-md">
               View All <span>▶</span>
             </button>
           </div>
           <div className="grid grid-cols-4 gap-6">
             {/* Ratan Bag */}
-            <div className="bg-[#FCFCF5] rounded-2xl p-4 shadow-md hover:shadow-lg transition">
+            <div className="bg-[#FCFCF5] rounded-2xl p-4 shadow-md transition-all duration-300 ease-in-out hover:-translate-y-1 hover:shadow-xl cursor-pointer">
               <div className="relative h-50 overflow-hidden mb-3">
                 <img src="/home-assets/ratan.jpg" alt="Ratan Bag" className="w-full h-full object-cover rounded-2xl"/>
                 <span className="absolute top-0 right-0 bg-[#BAD1EF] text-[#1D4ED8] text-sm font-semibold px-3 py-1 rounded-bl-2xl rounded-tr-2xl">-25 % off</span>
@@ -81,7 +80,7 @@ const HomePage = () => {
             </div>
             
              {/* Bischocho */}
-             <div className="bg-[#FCFCF5] rounded-3xl p-4  shadow-md hover:shadow-lg transition">
+             <div className="bg-[#FCFCF5] rounded-3xl p-4 shadow-md transition-all duration-300 ease-in-out hover:-translate-y-1 hover:shadow-xl cursor-pointer">
               <div className="relative h-50 rounded-lg overflow-hidden mb-3 bg-gray-100">
                 <img src="/home-assets/bischocho.jpg" alt="Bischocho" className="w-full h-full object-cover rounded-2xl"/>
               </div>
@@ -93,7 +92,7 @@ const HomePage = () => {
             </div>
 
             {/* Mustang */}
-            <div className="bg-[#FCFCF5] rounded-3xl border p-4 shadow-md hover:shadow-lgtransition">
+            <div className="bg-[#FCFCF5] rounded-3xl border p-4 shadow-md transition-all duration-300 ease-in-out hover:-translate-y-1 hover:shadow-xl cursor-pointer">
               <div className="relative h-50 rounded-lg overflow-hidden mb-3 bg-gray-100">
                 <img src="/home-assets/mustang.jpg" alt="Car" className="w-full h-full object-cover rounded-2xl"/>
               </div>
@@ -106,7 +105,7 @@ const HomePage = () => {
             </div>
 
             {/* Sinamak */}
-            <div className="bg-[#FCFCF5] rounded-3xl p-4 shadow-md hover:shadow-lg transition">
+            <div className="bg-[#FCFCF5] rounded-3xl p-4 shadow-md transition-all duration-300 ease-in-out hover:-translate-y-1 hover:shadow-xl cursor-pointer">
               <div className="relative h-50 rounded-lg overflow-hidden mb-3 bg-gray-100">
                 <img src="/home-assets/sinamak.jpg" alt="Sinamak" className="w-full h-full object-cover rounded-2xl"/>
               </div>
@@ -117,7 +116,7 @@ const HomePage = () => {
               </div>
             </div>
              {/* Ratan Bag */}
-            <div className="bg-[#FCFCF5] rounded-2xl p-4 shadow-md hover:shadow-lg transition">
+            <div className="bg-[#FCFCF5] rounded-2xl p-4 shadow-md transition-all duration-300 ease-in-out hover:-translate-y-1 hover:shadow-xl cursor-pointer">
               <div className="relative h-50 overflow-hidden mb-3">
                 <img src="/home-assets/ratan.jpg" alt="Ratan Bag" className="w-full h-full object-cover rounded-2xl"/>
                 <span className="absolute top-0 right-0 bg-[#BAD1EF] text-[#1D4ED8] text-sm font-semibold px-3 py-1 rounded-bl-2xl rounded-tr-2xl">-25 % off</span>
@@ -133,7 +132,7 @@ const HomePage = () => {
             </div>
             
              {/* Bischocho */}
-             <div className="bg-[#FCFCF5] rounded-3xl p-4  shadow-md hover:shadow-lg transition">
+             <div className="bg-[#FCFCF5] rounded-3xl p-4 shadow-md transition-all duration-300 ease-in-out hover:-translate-y-1 hover:shadow-xl cursor-pointer">
               <div className="relative h-50 rounded-lg overflow-hidden mb-3 bg-gray-100">
                 <img src="/home-assets/bischocho.jpg" alt="Bischocho" className="w-full h-full object-cover rounded-2xl"/>
               </div>
@@ -145,7 +144,7 @@ const HomePage = () => {
             </div>
 
             {/* Mustang */}
-            <div className="bg-[#FCFCF5] rounded-3xl border p-4 shadow-md hover:shadow-lgtransition">
+            <div className="bg-[#FCFCF5] rounded-3xl border p-4 shadow-md transition-all duration-300 ease-in-out hover:-translate-y-1 hover:shadow-xl cursor-pointer">
               <div className="relative h-50 rounded-lg overflow-hidden mb-3 bg-gray-100">
                 <img src="/home-assets/mustang.jpg" alt="Car" className="w-full h-full object-cover rounded-2xl"/>
               </div>
@@ -158,7 +157,7 @@ const HomePage = () => {
             </div>
 
             {/* Sinamak */}
-            <div className="bg-[#FCFCF5] rounded-3xl p-4 shadow-md hover:shadow-lg transition">
+            <div className="bg-[#FCFCF5] rounded-3xl p-4 shadow-md transition-all duration-300 ease-in-out hover:-translate-y-1 hover:shadow-xl cursor-pointer">
               <div className="relative h-50 rounded-lg overflow-hidden mb-3 bg-gray-100">
                 <img src="/home-assets/sinamak.jpg" alt="Sinamak" className="w-full h-full object-cover rounded-2xl"/>
               </div>
@@ -175,13 +174,13 @@ const HomePage = () => {
         <section>
           <div className="flex justify-between items-center mb-12 mt-25">
             <h2 className="text-5xl font-bold text-[#343434]">Recent Listings</h2>
-            <button className="bg-[#115FC8] text-white px-5 py-2 rounded-xl font-medium flex items-center gap-2 cursor-pointer">
+            <button className="bg-[#115FC8] text-white px-5 py-2 rounded-xl font-medium flex items-center gap-2 cursor-pointer transition-all duration-300 ease-in-out hover:bg-blue-800 hover:scale-105 hover:shadow-md">
               View All <span>▶</span>
             </button>
           </div>
           <div className="grid grid-cols-3 gap-6">
             {[1, 2, 3, 4, 5, 6].map((item) => (
-              <div key={item} className="bg-[#FCFCF5] rounded-2xl overflow-hidden shadow-md hover:shadow-lg  transition">
+              <div key={item} className="bg-[#FCFCF5] rounded-2xl overflow-hidden shadow-md transition-all duration-300 ease-in-out hover:-translate-y-1 hover:shadow-xl cursor-pointer">
                 <div className="relative h-48">
                   <img src="/home-assets/ilodirect.jpg" alt="Coffee Break" className="w-full h-full object-cover" />
                   <div className={`absolute top-3 left-3 text-white text-[10px] font-bold px-2.5 py-1 rounded-lg ${item % 2 === 0 ? 'bg-green-500' : 'bg-red-500'}`}>
@@ -217,7 +216,7 @@ const HomePage = () => {
                   <img 
                     src="/home-assets/blue-arrow-button.svg" 
                     alt="View Details" 
-                    className="w-13 h-13 cursor-pointer transition-transform duration-200 hover:scale-110" 
+                    className="w-13 h-13 cursor-pointer transition-all duration-300 hover:scale-110 hover:opacity-90" 
                   />
                 </button>
                 </div>
@@ -230,13 +229,13 @@ const HomePage = () => {
         <section>
           <div className="flex justify-between items-center mb-12 mt-25">
             <h2 className="text-5xl font-bold text-[#343434]">Job Offerings</h2>
-            <button className="bg-[#115FC8] text-white px-5 py-2 rounded-xl font-medium flex items-center gap-2 cursor-pointer">
+            <button className="bg-[#115FC8] text-white px-5 py-2 rounded-xl font-medium flex items-center gap-2 cursor-pointer transition-all duration-300 ease-in-out hover:bg-blue-800 hover:scale-105 hover:shadow-md">
               View All <span>▶</span>
             </button>
           </div>
           <div className="grid grid-cols-3 gap-6">
             {[1, 2, 3, 4, 5, 6].map((item) => (
-              <div key={item} className="bg-[#FCFCF5] rounded-xl p-5 shadow-md hover:shadow-lg transition flex flex-col justify-between">
+              <div key={item} className="bg-[#FCFCF5] rounded-xl p-5 shadow-md flex flex-col justify-between transition-all duration-300 ease-in-out hover:-translate-y-1 hover:shadow-xl cursor-pointer">
                 <div className="flex gap-4 mb-4">
                   <div className="w-22 h-22 rounded-full bg-gray-50 shrink-0 flex items-center justify-center border border-blue-200 overflow-hidden">
                     <img src="/home-assets/wvsu-logo.svg" alt="Logo" className="w-full h-full object-cover" />
@@ -252,7 +251,7 @@ const HomePage = () => {
                 </div>
                 <div className="border-t-2 border-[#DCDCD6] pt-4 flex justify-between items-center">
                   <p className="text-[#115FC8] font-semibold">₱ 30,000.00 <span className="text-[#4D4D4D] text-xs font-semibold">/monthly</span></p>
-                  <button className="text-[#113FC8] border-2 border-[#113FC8] px-3 py-1.5 rounded-xl text-xs font-semibold hover:bg-blue-50 transition">
+                  <button className="text-[#113FC8] border-2 border-[#113FC8] px-3 py-1.5 rounded-xl text-xs font-semibold bg-transparent transition-all duration-300 ease-in-out hover:bg-[#113FC8] hover:text-white hover:scale-105 cursor-pointer">
                     View Details ❯
                   </button>
                 </div>
@@ -264,13 +263,13 @@ const HomePage = () => {
           {/* Newsletter Section */}
         <section className="bg-[#FACC15] rounded-3xl p-12 text-center mt-25 shadow-sm">
           <h2 className="text-4xl font-bold text-[#343434] mb-10">Get notified of latest listings</h2>
-          <div className="max-w-220 mx-auto bg-white rounded-2xl py-2 px-6 flex border border-gray-200 shadow-sm mb-4">
+          <div className="max-w-220 mx-auto bg-white rounded-2xl py-2 px-6 flex border border-gray-200 shadow-sm mb-4 transition-all duration-300 focus-within:ring-2 focus-within:ring-[#115FC8]">
             <input 
               type="email" 
               placeholder="Enter Email Address" 
               className="flex-1 bg-transparent py-2 outline-none text-[#827D7D]"
             />
-            <button className="bg-[#115FC8] text-white px-8 py-2 rounded-xl font-medium hover:bg-blue-700 transition cursor-pointer">
+            <button className="bg-[#115FC8] text-white px-8 py-2 rounded-xl font-medium cursor-pointer transition-all duration-300 ease-in-out hover:bg-blue-800 hover:scale-105 hover:shadow-md">
               Subscribe
             </button>
           </div>
