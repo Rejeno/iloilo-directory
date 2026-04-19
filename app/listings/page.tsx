@@ -59,7 +59,7 @@ export default function ListingsPage() {
               
             <div className="flex items-center gap-3">
                 {/* Grid View Button (Active) */}
-                <button className="flex items-center justify-center w-10 h-10 pt-2">
+                <button className="flex items-center justify-center w-10 h-10 pt-2 cursor-pointer">
                     <img 
                     src="/listings-assets/one.svg" 
                     alt="Grid View" 
@@ -68,7 +68,7 @@ export default function ListingsPage() {
                 </button>
                 
                 {/* List View Button (Inactive) */}
-                <button className="flex items-center justify-center w-10 h-10 bg-[#FAFAEF] rounded-xl shadow-md">
+                <button className="flex items-center justify-center w-10 h-10 bg-[#FAFAEF] rounded-xl shadow-md cursor-pointer">
                     <img 
                     src="/listings-assets/two.svg"  
                     alt="List View" 
@@ -79,7 +79,54 @@ export default function ListingsPage() {
             </div>
           </div>
         </div>
-
+        {/* Listings Grid */}
+        <section>
+          <div className="grid grid-cols-3 gap-6">
+            {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15].map((item) => (
+              <div key={item} className="bg-[#FCFCF5] rounded-2xl overflow-hidden shadow-md transition-all duration-300 ease-in-out hover:-translate-y-1 hover:shadow-xl cursor-pointer">
+                <div className="relative h-48">
+                  <img src="/listings-assets/ilodirect.jpg" alt="Coffee Break" className="w-full h-full object-cover" />
+                  <div className={`absolute top-3 left-3 text-white text-[10px] font-bold px-2.5 py-1 rounded-lg ${item % 2 === 0 ? 'bg-green-500' : 'bg-red-500'}`}>
+                    {item % 2 === 0 ? 'Open' : 'Closed'}
+                  </div>
+                  <div className="absolute top-3 right-3 bg-white backdrop-blur-sm text-black text-[10px] font-medium px-2.5 py-1 rounded-lg shadow-sm">
+                    Education & Training
+                  </div>
+                </div>
+                <div className="p-4 flex items-center justify-between">
+                  <div>
+                    <h3 className="font-normal text-2xl text-black">Coffee Break Manduriao</h3>
+                    <div className="flex items-center text-sm text-black mt-2 gap-4">
+                      <span className="flex items-center gap-1">
+                        <img 
+                          src="/listings-assets/location-icon.svg" 
+                          alt="Location" 
+                          className="w-5 h-5" 
+                        />
+                        Miag-ao, Iloilo
+                      </span>
+                      <span className="flex items-center gap-1">
+                        <img 
+                          src="/listings-assets/calendar-icon.svg" 
+                          alt="Calendar" 
+                          className="w-6 h-6" 
+                        />
+                        Monday - Friday
+                      </span>
+                    </div>
+                  </div>
+                <button>
+                  <img 
+                    src="/listings-assets/blue-arrow-button.svg" 
+                    alt="View Details" 
+                    className="w-13 h-13 cursor-pointer transition-all duration-300 hover:scale-110 hover:opacity-90" 
+                  />
+                </button>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
     </div>
     </main>
   );
