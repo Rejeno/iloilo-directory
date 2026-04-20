@@ -7,11 +7,11 @@ export default function PostTypePage() {
     return (
         <div className="min-h-screen bg-[#FBFBF5] font-sans pb-20">
             {/* --- HERO SECTION --- */}
-            <section className="relative h-[510px] w-full flex items-end pb-12 md:pb-16 overflow-hidden">
+            <section className="relative h-125 w-full flex items-end pb-12 md:pb-16 overflow-hidden -mt-25 z-0">
                 <div
                     className="absolute inset-0 bg-cover bg-center"
                     style={{
-                        backgroundImage: `linear-gradient(0deg, rgba(20, 17, 17, 0.52), rgba(20, 17, 17, 0.52)), url('https://images.unsplash.com/photo-1518998053901-5348d3961a04?q=80&w=2000&auto=format&fit=crop')`, // Placeholder for museum/gallery
+                        backgroundImage: `linear-gradient(0deg, rgba(20, 17, 17, 0.52), rgba(20, 17, 17, 0.52)), url('/listings-assets/ilodirect.jpg')`, // Placeholder for museum/gallery
                         zIndex: 0
                     }}
                 />

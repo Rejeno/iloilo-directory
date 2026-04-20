@@ -53,7 +53,7 @@ export default function ExploreCategories() {
         <main className={`${sora.variable} ${openSans.variable} font-sans bg-[#FBFBF5] min-h-screen pb-24`}>
 
             {/* Hero Section - Scaled to match Events Page */}
-            <section className="relative w-full h-[450px] flex flex-col items-center justify-center text-[#FCFCF5] overflow-hidden">
+            <section className="relative w-full h-[450px] flex flex-col items-center justify-center text-[#FCFCF5] overflow-hidden -mt-25 z-0">
                 <div
                     className="absolute inset-0 bg-cover bg-center"
                     style={{

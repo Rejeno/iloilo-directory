@@ -15,7 +15,7 @@ export default function JobsPage() {
     return (
         <div className="min-h-screen bg-[#FBFBF5] font-sans">
             {/* --- HERO SECTION --- */}
-            <section className="relative h-[510px] w-full flex items-center justify-center overflow-hidden">
+            <section className="relative h-[510px] w-full flex items-center justify-center overflow-hidden -mt-25 z-0">
                 <div
                     className="absolute inset-0 bg-cover bg-center"
                     style={{

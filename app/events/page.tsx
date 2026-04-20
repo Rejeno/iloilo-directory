@@ -12,7 +12,7 @@ interface EventCardProps {
     status: 'Upcoming' | 'Past';
 }
 
-export const EventCard = ({ title, date, description, author, imageUrl, avatarUrl, status }: EventCardProps) => {
+const EventCard = ({ title, date, description, author, imageUrl, avatarUrl, status }: EventCardProps) => {
     return (
         <div className="bg-[#FCFCF5] rounded-[12px_24px_24px_24px] p-4 shadow-[0px_4px_10px_rgba(0,0,0,0.1)] flex flex-col h-full transition-transform hover:-translate-y-1 cursor-pointer">
             <div className="relative w-full aspect-video rounded-[12px] overflow-hidden">
@@ -71,11 +71,11 @@ export default function EventsPage() {
 
     return (
         <main className="bg-[#FBFBF5] min-h-screen pb-20">
-            <section className="relative w-full h-[450px] flex flex-col items-center justify-center text-[#FCFCF5] overflow-hidden">
+            <section className="relative w-full h-125 flex flex-col items-center justify-center text-[#FCFCF5] overflow-hidden -mt-25 z-0">
                 <div
                     className="absolute inset-0 bg-cover bg-center"
                     style={{
-                        backgroundImage: `linear-gradient(0deg, rgba(20, 17, 17, 0.52), rgba(20, 17, 17, 0.52)), url('https://picsum.photos/1920/850')`,
+                        backgroundImage: `linear-gradient(0deg, rgba(20, 17, 17, 0.52), rgba(20, 17, 17, 0.52)), url('/listings-assets/ilodirect.jpg')`,
                         zIndex: 0
                     }}
                 />
