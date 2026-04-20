@@ -59,17 +59,14 @@ export const EventCard = ({ title, date, description, author, imageUrl, avatarUr
 };
 
 export default function EventsPage() {
-    const events = Array.from({ length: 12 }).map((_, idx) => {
-        const seed = (idx + 1) * 100;
-        return {
-            title: "Dinagyang Festival",
-            date: "December 26, 2025",
-            description: "Jaro National High School's Tribu Salognon delivered a masterful performance to capture the Dinagyang Tribes Competition 2026 championship on Sunday, January 25, dethroning defending champion.",
-            author: "Iloilo City Government",
-            imageUrl: `https://picsum.photos/seed/${seed}/335/246`,
-            avatarUrl: "/seal-iloilo.png",
-            status: "Upcoming" as const
-        };
+    const events = Array(12).fill({
+        title: "Dinagyang Festival",
+        date: "December 26, 2025",
+        description: "Jaro National High School's Tribu Salognon delivered a masterful performance to capture the Dinagyang Tribes Competition 2026 championship on Sunday, January 25, dethroning defending champion.",
+        author: "Iloilo City Government",
+        imageUrl: "/event-placeholder.png",
+        avatarUrl: "/seal-iloilo.png",
+        status: "Upcoming"
     });
 
     return (

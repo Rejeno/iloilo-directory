@@ -130,48 +130,50 @@ function ItemCard({ index }: { index: number }) {
 }
 
 function Pagination() {
-  return (
-    <div className="flex items-center gap-2">
-      {/* Caret Left */}
-      <button className="w-10 h-10 md:w-12 md:h-12 flex items-center justify-center bg-[#113FC8] text-white rounded-lg shadow hover:bg-[#0e32a6] transition-colors">
-        <span className="text-xl">◀</span>
-      </button>
+    return (
+        <div className="flex items-center gap-2">
+            {/* Caret Left */}
+            <button className="w-10 h-10 md:w-12 md:h-12 flex items-center justify-center bg-[#113FC8] text-white rounded-lg shadow hover:bg-[#0e32a6] transition-colors">
+                <span className="text-xl">◀</span>
+            </button>
+            
+            {/* Page Numbers */}
+            {[1, 2, 3, 4, 5, 6].map(num => (
+                <button key={num} className={`w-8 h-10 md:w-10 md:h-12 flex items-center justify-center rounded-lg shadow-sm font-bold font-sora transition-all ${num === 1 ? 'bg-[#dee6f0] text-[#113FC8] border-2 border-[#113FC8]' : 'bg-[#dee6f0] text-[#113FC8] hover:bg-[#c8d6e8]'}`}>
+                    {num}
+                </button>
+            ))}
+            
+            {/* Ellipses */}
+            <div className="flex gap-1.5 px-2">
+                {[1, 2, 3].map(i => (
+                    <div key={i} className="w-1.5 h-1.5 bg-[#113FC8] rounded-full" />
+                ))}
+            </div>
+            
+            {/* End Pages */}
+            {[138, 139, 140].map(num => (
+                <button key={num} className="w-12 h-10 md:w-14 md:h-12 flex items-center justify-center bg-[#dee6f0] text-[#113FC8] rounded-lg shadow-sm hover:bg-[#c8d6e8] font-bold font-sora">
+                    {num}
+                </button>
+            ))}
 
-      {/* Page Numbers */}
-      {[1, 2, 3, 4, 5, 6].map(num => (
-        <button key={num} className={`w-8 h-10 md:w-10 md:h-12 flex items-center justify-center rounded-lg shadow-sm font-bold transition-all ${num === 1 ? 'bg-[#FCFCF5] text-[#113FC8] border-2 border-[#113FC8]' : 'bg-[#FCFCF5] text-[#113FC8] hover:bg-gray-100'}`}>
-          {num}
-        </button>
-      ))}
-
-      {/* Ellipses */}
-      <div className="flex gap-1.5 px-2">
-        {[1, 2, 3].map(i => (
-          <div key={i} className="w-1.5 h-1.5 bg-[#113FC8] rounded-full" />
-        ))}
-      </div>
-
-      {/* End Pages */}
-      {[138, 139, 140].map(num => (
-        <button key={num} className="w-12 h-10 md:w-14 md:h-12 flex items-center justify-center bg-[#FCFCF5] text-[#113FC8] rounded-lg shadow-sm hover:bg-gray-100 font-bold">
-          {num}
-        </button>
-      ))}
-
-      {/* Caret Right */}
-      <button className="w-10 h-10 md:w-12 md:h-12 flex items-center justify-center bg-[#113FC8] text-white rounded-lg shadow hover:bg-[#0e32a6] transition-colors">
-        <span className="text-xl">▶</span>
-      </button>
-
-      {/* Go to page select */}
-      <div className="ml-8 hidden lg:flex items-center gap-4">
-        <span className="font-sora font-semibold text-lg">Go to page:</span>
-        <div className="relative w-20 h-10 md:w-24 md:h-12">
-          <input
-            type="text"
-            placeholder="e.g 25"
-            className="w-full h-full bg-[#FCFCF5] border border-[#343434] shadow-sm rounded-lg text-center font-open-sans text-lg text-[#827D7D] focus:outline-none"
-          />
+            {/* Caret Right */}
+            <button className="w-10 h-10 md:w-12 md:h-12 flex items-center justify-center bg-[#113FC8] text-white rounded-lg shadow hover:bg-[#0e32a6] transition-colors">
+                <span className="text-xl">▶</span>
+            </button>
+            
+            {/* Go to page select */}
+            <div className="ml-8 hidden lg:flex items-center gap-4">
+                <span className="font-sora font-semibold text-lg">Go to page:</span>
+                <div className="relative w-20 h-10 md:w-24 md:h-12">
+                    <input 
+                        type="text" 
+                        placeholder="e.g 25" 
+                        className="w-full h-full bg-[#FCFCF5] border border-[#343434] shadow-sm rounded-lg text-center font-open-sans text-lg text-[#827D7D] focus:outline-none" 
+                    />
+                </div>
+            </div>
         </div>
       </div>
     </div>
