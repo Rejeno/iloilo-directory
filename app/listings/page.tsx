@@ -127,6 +127,56 @@ export default function ListingsPage() {
             ))}
           </div>
         </section>
+
+        {/* Pagination */}
+        <div className="flex flex-wrap items-center justify-center gap-2 mt-20">
+          <button className="flex items-center justify-center w-10 h-10 rounded-lg bg-[#113FC8] text-white hover:bg-blue-700 transition-colors">
+            <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+            </svg>
+          </button>
+          
+          <div className="flex items-center gap-1">
+            {[1, 2, 3, 4, 5, 6].map((page) => (
+              <button 
+                key={page} 
+                className={`w-10 h-10 rounded-lg font-bold transition-colors ${
+                  page === 1 
+                    ? 'bg-blue-100 text-[#113FC8]' 
+                    : 'bg-white text-[#113FC8] hover:bg-blue-50 border border-gray-200'
+                }`}
+              >
+                {page}
+              </button>
+            ))}
+            
+            <span className="px-2 text-[#113FC8] font-bold tracking-widest">...</span>
+            
+            {[138, 139, 140].map((page) => (
+              <button 
+                key={page} 
+                className="w-10 h-10 rounded-lg font-bold bg-white text-[#113FC8] hover:bg-blue-50 border border-gray-200 transition-colors"
+              >
+                {page}
+              </button>
+            ))}
+          </div>
+
+          <button className="flex items-center justify-center w-10 h-10 rounded-lg bg-[#113FC8] text-white hover:bg-blue-700 transition-colors">
+            <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            </svg>
+          </button>
+
+          <div className="flex items-center ml-20 gap-2">
+            <span className="text-sm font-bold text-black">Go to page:</span>
+            <input 
+              type="text" 
+              placeholder="e.g 25" 
+              className="w-16 h-10 px-2 text-[#827D7D] text-sm text-center shadow-md border-2 border-gray-300 rounded-lg outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
+            />
+          </div>
+        </div>
     </div>
     </main>
   );
