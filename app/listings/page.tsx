@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 // Mock data based on the screenshot
 const mockListings = Array(15).fill({
@@ -83,7 +84,7 @@ export default function ListingsPage() {
         <section>
           <div className="grid grid-cols-3 gap-6">
             {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15].map((item) => (
-              <div key={item} className="bg-[#FCFCF5] rounded-2xl overflow-hidden shadow-md transition-all duration-300 ease-in-out hover:-translate-y-1 hover:shadow-xl cursor-pointer">
+              <Link key={item} href="/post-type" className="block bg-[#FCFCF5] rounded-2xl overflow-hidden shadow-md transition-all duration-300 ease-in-out hover:-translate-y-1 hover:shadow-xl cursor-pointer">
                 <div className="relative h-48">
                   <img src="/listings-assets/ilodirect.jpg" alt="Coffee Break" className="w-full h-full object-cover" />
                   <div className={`absolute top-3 left-3 text-white text-[10px] font-bold px-2.5 py-1 rounded-lg ${item % 2 === 0 ? 'bg-green-500' : 'bg-red-500'}`}>
@@ -123,7 +124,7 @@ export default function ListingsPage() {
                   />
                 </button>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </section>
