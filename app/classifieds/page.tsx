@@ -9,14 +9,14 @@ export default function ClassifiedsPage() {
       {/* Hero Section */}
       <section className="relative w-full h-[450px] flex flex-col items-center justify-center text-[#FCFCF5] overflow-hidden">
         {/* Hero Background Image */}
-        <div 
+        <div
           className="absolute inset-0 bg-cover bg-center"
-          style={{ 
+          style={{
             backgroundImage: `linear-gradient(0deg, rgba(20, 17, 17, 0.52), rgba(20, 17, 17, 0.52)), url('https://picsum.photos/1920/850')`,
-            zIndex: 0 
+            zIndex: 0
           }}
         />
-        
+
         {/* Hero Content */}
         <div className="relative z-10 w-full max-w-6xl px-4 text-center">
           <h1 className="font-sora font-bold text-5xl md:text-6xl leading-tight mb-6">
@@ -36,7 +36,7 @@ export default function ClassifiedsPage() {
             <p className="text-[#343434] font-wix text-base md:text-lg">Showing 1 - 40 of 10,085 Results</p>
             <h2 className="font-sora font-bold text-2xl md:text-3xl text-[#343434]">Local Finds</h2>
           </div>
-          
+
           <div className="flex items-center gap-4">
             <div className="relative w-[190px] h-[44px] bg-[#FAFAEF] shadow-sm rounded-xl flex items-center px-4">
               <select className="w-full font-open-sans text-base text-[#827D7D] appearance-none bg-transparent focus:outline-none cursor-pointer pr-8">
@@ -46,7 +46,7 @@ export default function ClassifiedsPage() {
                 <DropdownIcon />
               </div>
             </div>
-            
+
             {/* View Toggles */}
             <div className="flex gap-2">
               <button className="w-10 h-10 bg-[#113FC8] shadow-sm rounded-xl flex items-center justify-center text-[#FCFCF5]">
@@ -70,7 +70,7 @@ export default function ClassifiedsPage() {
 
         {/* Pagination */}
         <div className="mt-20 flex justify-center">
-            <Pagination />
+          <Pagination />
         </div>
       </main>
     </div>
@@ -82,49 +82,49 @@ export default function ClassifiedsPage() {
 function ItemCard({ index }: { index: number }) {
   // Use a stable seed based on index to avoid hydration mismatch
   const seed = (index + 1) * 100;
-  
+
   return (
-    <div className="w-full max-w-[280px] bg-[#FCFCF5] shadow-[0px_4px_10px_rgba(0,0,0,0.1)] rounded-[12px_24px_24px_24px] p-2 relative group cursor-pointer transition-transform hover:-translate-y-1">
+    <div className="w-full max-w-[280px] bg-[#FCFCF5] shadow-[0px_4px_10px_rgba(0,0,0,0.1)] rounded-[12px_24px_24px_24px] p-2 relative group cursor-pointer border border-transparent hover:border-[#113FC8]/30 transition-all duration-300 hover:-translate-y-1">
       {/* Discount Badge */}
       <div className="absolute top-[10px] right-2 z-10 w-[70px] h-[24px] bg-[#BAD1EF] rounded-[0px_12px] flex items-center justify-center">
-          <span className="text-[#115FC8] font-wix font-bold text-[10px] md:text-xs">
-            -25 % off
-          </span>
+        <span className="text-[#115FC8] font-wix font-bold text-[10px] md:text-xs">
+          -25 % off
+        </span>
       </div>
 
       {/* Image Container */}
       <div className="relative w-full aspect-[335/246] rounded-[12px] overflow-hidden bg-[#D9D9D9]">
-        <Image 
+        <Image
           src={`https://picsum.photos/seed/${seed}/335/246`}
           alt="Product"
           fill
           className="object-cover group-hover:scale-110 transition-transform duration-700"
         />
-        
+
         {/* Free Shipping Badge */}
         <div className="absolute bottom-0 left-0 z-10 px-3 py-1 bg-[#BAD1EF] rounded-[0px_20px_0px_12px] flex items-center justify-center">
-            <span className="text-[#115FC8] font-wix text-xs text-center">
-              Free Shipping Fee
-            </span>
+          <span className="text-[#115FC8] font-wix text-xs text-center">
+            Free Shipping Fee
+          </span>
         </div>
       </div>
 
       {/* Details Area */}
       <div className="mt-3 px-2 pb-1">
         <h3 className="font-wix text-lg font-medium text-[#343434] truncate">Ratan Bag</h3>
-        
+
         {/* Brand New Tag */}
         <div className="mt-1.5 w-[75px] py-0.5 bg-[#FACC15] flex items-center justify-center rounded-sm">
-            <span className="text-[#4D4D4D] font-wix text-xs">
-               Brand New
-            </span>
+          <span className="text-[#4D4D4D] font-wix text-xs">
+            Brand New
+          </span>
         </div>
 
-      <div className="flex justify-between items-center mt-2.5">
-        <p className="font-wix font-bold text-lg text-[#115FC8]">₱ 250.00</p>
-        <p className="text-[#4D4D4D] text-xs font-wix">221 sold</p>
+        <div className="flex justify-between items-center mt-2.5">
+          <p className="font-wix font-bold text-lg text-[#115FC8]">₱ 250.00</p>
+          <p className="text-[#4D4D4D] text-xs font-wix">221 sold</p>
+        </div>
       </div>
-     </div>
     </div>
   );
 }
@@ -175,54 +175,56 @@ function Pagination() {
                 </div>
             </div>
         </div>
-    )
+      </div>
+    </div>
+  )
 }
 
 // Icons
-function DropdownIcon() { 
+function DropdownIcon() {
   return (
     <svg width="39" height="39" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M10 15L19.5 24.5L29 15" stroke="#827D7D" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+      <path d="M10 15L19.5 24.5L29 15" stroke="#827D7D" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
     </svg>
-  ); 
+  );
 }
 
-function SearchIcon() { 
+function SearchIcon() {
   return (
     <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M21 21L15 15M17 10C17 13.866 13.866 17 10 17C6.13401 17 3 13.866 3 10C3 6.13401 6.13401 3 10 3C13.866 3 17 6.13401 17 10Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+      <path d="M21 21L15 15M17 10C17 13.866 13.866 17 10 17C6.13401 17 3 13.866 3 10C3 6.13401 6.13401 3 10 3C13.866 3 17 6.13401 17 10Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
     </svg>
-  ); 
+  );
 }
 
-function FilterIcon() { 
+function FilterIcon() {
   return (
     <svg width="45" height="45" viewBox="0 0 68 68" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M11 11H57L34 38L11 11Z" fill="currentColor"/>
-      <path d="M34 38V57L40 51V38" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+      <path d="M11 11H57L34 38L11 11Z" fill="currentColor" />
+      <path d="M34 38V57L40 51V38" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
     </svg>
-  ); 
+  );
 }
 
-function GridViewIcon() { 
+function GridViewIcon() {
   return (
     <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <rect x="6" y="6" width="16" height="16" fill="white"/>
-      <rect x="25.5" y="6" width="16.5" height="16" fill="white"/>
-      <rect x="6" y="25.5" width="16" height="16.5" fill="white"/>
-      <rect x="25.5" y="25.5" width="16.5" height="16.5" fill="white"/>
+      <rect x="6" y="6" width="16" height="16" fill="white" />
+      <rect x="25.5" y="6" width="16.5" height="16" fill="white" />
+      <rect x="6" y="25.5" width="16" height="16.5" fill="white" />
+      <rect x="25.5" y="25.5" width="16.5" height="16.5" fill="white" />
     </svg>
-  ); 
+  );
 }
 
-function ListViewIcon() { 
+function ListViewIcon() {
   return (
     <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <rect x="6" y="6" width="8.2" height="36" fill="#324558"/>
-      <rect x="19.9" y="6" width="8.2" height="36" fill="#324558"/>
-      <rect x="33.8" y="6" width="8.2" height="36" fill="#324558"/>
+      <rect x="6" y="6" width="8.2" height="36" fill="#324558" />
+      <rect x="19.9" y="6" width="8.2" height="36" fill="#324558" />
+      <rect x="33.8" y="6" width="8.2" height="36" fill="#324558" />
     </svg>
-  ); 
+  );
 }
 
 function HeartIcon() {
