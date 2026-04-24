@@ -33,7 +33,7 @@ export default function ListingsPage() {
           <h1 className="text-6xl font-bold text-white mb-8 drop-shadow-md">
            Listings
           </h1>
-          <p className="text-3xl text-white font-semibold drop-shadow-md max-w-full">
+          <p className="text-2xl text-white font-semibold drop-shadow-md max-w-full">
             Grow your business, generate quality leads, and get more inquiries with Iloilo Directory!
         </p>
         </div>
