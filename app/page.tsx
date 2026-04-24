@@ -20,7 +20,7 @@ const HomePage = () => {
           <h1 className="text-6xl font-bold text-white mb-8 drop-shadow-md">
             Discover Local Businesses in Iloilo
           </h1>
-          <p className="text-3xl text-white font-semibold drop-shadow-md max-w-full">
+          <p className="text-2xl text-white font-semibold drop-shadow-md max-w-full">
             Let's discover the best places to eat, drink, and shop nearest to you.
           </p>
         </div>
